@@ -9,8 +9,10 @@ mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("Connected to DB..."))
   .catch(() => console.log("Couldn't connect to DB!"));
-
-const port = 5000;
+app.get("/", (req, res) => {
+  return res.json({ name: "Victor" });
+});
+const port = process.env.PORT;
 
 app.listen(port, () => {
   console.log("Server running...");
