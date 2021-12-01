@@ -27,6 +27,7 @@ app.use(
 // ROUTES
 app.use("/api/v1/makers", require("./routes/maker"));
 app.use("/api/v1/cars", require("./routes/car"));
+app.use("/api/v1/auth", require("./routes/auth"));
 // PORT AND LISTEN
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

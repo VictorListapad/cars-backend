@@ -10,7 +10,6 @@ const UserSchema = Schema({
     enum: ["USER", "ADMIN"],
     default: "USER",
   },
-  listings: { type: [Schema.Types.ObjectId], trim: true, ref: "Car" },
 });
 
 module.exports = model("User", UserSchema);
